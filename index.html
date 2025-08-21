@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio • KARTHIK</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated Background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="gradient-overlay" aria-hidden="true"></div>
+
+  <!-- Site Wrapper -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-text">KARTHIK R</span>
+    </div>
+    <nav class="nav">
+      <button class="nav-btn" data-target="#home">Home</button>
+      <button class="nav-btn" data-target="#about">About</button>
+      <button class="nav-btn" data-target="#skills">Skills</button>
+      <button class="nav-btn" data-target="#projects">Projects</button>
+      <button class="nav-btn" data-target="#certs">Certifications</button>
+      <button class="nav-btn" data-target="#resume">Resume</button>
+      <button class="nav-btn" data-target="#contact">Contact</button>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" title="Toggle theme">◐</button>
+  </header>
+
+  <!-- Pagination Dots -->
+  <aside class="pager">
+    <button class="dot active" data-target="#home" aria-label="Go to Home"></button>
+    <button class="dot" data-target="#about" aria-label="Go to About"></button>
+    <button class="dot" data-target="#skills" aria-label="Go to Skills"></button>
+    <button class="dot" data-target="#projects" aria-label="Go to Projects"></button>
+    <button class="dot" data-target="#certs" aria-label="Go to Certifications"></button>
+    <button class="dot" data-target="#resume" aria-label="Go to Resume"></button>
+    <button class="dot" data-target="#contact" aria-label="Go to Contact"></button>
+  </aside>
+
+  <!-- Sections -->
+  <main>
+    <!-- HOME -->
+    <section id="home" class="panel panel-center">
+      <div class="content">
+        <div class="hero-left">
+          <h1 class="title">
+            <span class="hello">Hi, I'm Karthik R</span>
+            <span class="typed" data-text='["a B.Tech CSE Student.","a Web Developer.","a Problem Solver.","a Tech Enthusiast."]'></span>
+          </h1>
+          <p class="subtitle reveal">I build clean, responsive websites and love solving real-world problems with code.</p>
+          <div class="actions reveal">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn outline" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="avatar-wrap">
+            <img id="profileImg" src="/profile.jpg" alt="Profile picture"/>
+            
+          </div>
+        </div>
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow next" data-next>Next ▸</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="panel">
+      <div class="content narrow">
+        <h2 class="section-title">About Me</h2>
+        <p class="reveal">
+          I'm currently pursuing <strong>B.Tech in Computer Science & Engineering</strong>. My interests include
+          <em>Web Development</em>, <em>DSA</em>, and <em>Machine Learning</em>. I enjoy building projects that
+          make a difference and learning modern tools and frameworks.
+        </p>
+        <div class="grid two reveal">
+          <div class="card">
+            <h3>Education</h3>
+            <ul>
+              <li>B.Tech CSE — SRM University(2023–2027)</li>
+              <li>Relevant Coursework: DS, Algorithms, DBMS, CN, OS</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Hackathon finalist / Club member</li>
+              <li>Open-source contributions</li>
+              <li>Volunteer at NGO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow prev" data-prev>◂ Prev</button>
+        <button class="arrow next" data-next>Next ▸</button>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="panel">
+      <div class="content narrow">
+        <h2 class="section-title">Skills</h2>
+        <div class="tags reveal" id="skillsTags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">C/C++</span>
+          <span class="tag">React (basics)</span>
+          <span class="tag">Git & GitHub</span>
+          <span class="tag">DBMS/SQL</span>
+        </div>
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow prev" data-prev>◂ Prev</button>
+        <button class="arrow next" data-next>Next ▸</button>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="panel">
+      <div class="content">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid three reveal">
+          <div class="card project">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal site with animated background and file uploads.</p>
+            <div class="btn-row">
+              <a class="btn small" href="#" aria-disabled="true">Live</a>
+              <a class="btn small outline" href="#" aria-disabled="true">Code</a>
+            </div>
+          </div>
+          <div class="card project">
+            <h3>Inventry Management System</h3>
+            <p>Efficient tracking of stocking levels, orders, and suppliers information.</p>
+            <div class="btn-row">
+              <a class="btn small" href="#" aria-disabled="true">Live</a>
+              <a class="btn small outline" href="#" aria-disabled="true">Code</a>
+            </div>
+          </div>
+          <div class="card project">
+            <h3>Job Portal</h3>
+            <p>Connecting employers with job seekers for ideal employment opportunities.</p>
+            <div class="btn-row">
+              <a class="btn small" href="#" aria-disabled="true">Live</a>
+              <a class="btn small outline" href="#" aria-disabled="true">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow prev" data-prev>◂ Prev</button>
+        <button class="arrow next" data-next>Next ▸</button>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="panel">
+      <div class="content">
+        <h2 class="section-title">Certifications</h2>
+        
+        <div id="certGallery" class="grid three certs-grid reveal">
+         <img class="certs-placeholder reveal" src="/certificate 1.jpg" alt="Certification placeholder"/>
+         <img class="certs-placeholder reveal" src="/certificate 2.jpg" alt="Certification placeholder"/>
+          <!-- Uploaded certification images will appear here -->
+        </div>
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow prev" data-prev>◂ Prev</button>
+        <button class="arrow next" data-next>Next ▸</button>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="panel">
+      <div class="content narrow">
+        <h2 class="section-title">Resume</h2>
+        <p class="reveal">This is My Resume.</p>
+        <div class="resume-wrap reveal">
+          <img id="resumeImg" src="/resume.jpg" alt="Resume preview"/>
+        </div>
+        
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow prev" data-prev>◂ Prev</button>
+        <button class="arrow next" data-next>Next ▸</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel">
+      <div class="content narrow">
+        <h2 class="section-title">Contact</h2>
+        <form id="contactForm" class="reveal">
+          <div class="grid two">
+            <label> Name
+              <input type="text" name="name" placeholder="Your name" required/>
+            </label>
+            <label> Email
+              <input type="email" name="email" placeholder="you@example.com" required/>
+            </label>
+          </div>
+          <label> Subject
+            <input type="text" name="subject" placeholder="Subject"/>
+          </label>
+          <label> Message
+            <textarea name="message" rows="5" placeholder="Write your message..."></textarea>
+          </label>
+          <div class="btn-row">
+            <button type="submit" class="btn primary">Send</button>
+            <button type="reset" class="btn outline">Clear</button>
+          </div>
+          <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="pager-arrows">
+        <button class="arrow prev" data-prev>◂ Prev</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Karthik R — B.Tech CSE Portfolio</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/karthik-r-00807234b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a> ·       <a href="https://github.com/kr0478" target="_blank">GitHub</a> ·       <a href="mailto:kr0478@srmist.edu.in">Gmail</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
